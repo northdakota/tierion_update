@@ -13,8 +13,8 @@ if [ $LOCAL = $REMOTE ]; then
     echo $(printf "%s: Up-to-date" "$NOW")
 elif [ $LOCAL = $BASE ]; then
     echo $(printf "%s: Updating..." "$NOW")
-    git pull
     make down
+    git pull
     make up
     echo $(printf "%s: Done..." "$NOW")
 else
