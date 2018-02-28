@@ -2,7 +2,7 @@
 
 for (( ; ; ))
 do
-    NODE=$(docker ps | grep -c 'chainpoint/chainpoint-node')
+    NODE=$(docker ps | grep -c 'gcr.io/chainpoint-registry/chainpoint-node')
 
     if  (("$NODE" >= 1)) ; then
         echo "Node running"
